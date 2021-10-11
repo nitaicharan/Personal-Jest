@@ -25,9 +25,9 @@ This project is part of my personal study about the delightful JavaScript Testin
 ```
 git add -A
 git commit -m <tittle> <message>
-git push <remote> <branch>
-git subtree push --prefix <directory> <remote> gh-pages
-git push <remote> `git subtree split --prefix <directory> <branch>`:gh-pages --force
+git push origin main
+git subtree push --prefix coverage origin gh-pages
+git push origin `git subtree split --prefix coverage main`:gh-pages --force
 ```
 
 <!-- ALIAS README -->
