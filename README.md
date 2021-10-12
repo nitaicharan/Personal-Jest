@@ -27,7 +27,7 @@ git add -A
 git commit -m <tittle> <message>
 git push origin main
 git subtree push --prefix coverage origin gh-pages
-git push origin `git subtree split --prefix coverage main`:gh-pages --force
+git push origin `git subtree split --prefix coverage/lcov-report main`:gh-pages --force
 ```
 
 <!-- ALIAS README -->
