@@ -1,4 +1,4 @@
-import { fromPredicate, none, of, some } from "fp-ts/Option";
+import { fromPredicate, none, some } from "fp-ts/Option";
 
 describe("Option", () => {
   describe("fromPredicate", () => {

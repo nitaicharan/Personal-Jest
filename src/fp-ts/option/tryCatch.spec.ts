@@ -1,4 +1,4 @@
-import { tryCatch, none, of, some } from "fp-ts/Option";
+import { none, some, tryCatch } from "fp-ts/Option";
 
 describe("Option", () => {
   describe("tryCatch", () => {
