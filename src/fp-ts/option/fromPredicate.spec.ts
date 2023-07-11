@@ -2,16 +2,16 @@ import { fromPredicate, none, of, some } from "fp-ts/Option";
 
 describe("Option", () => {
   describe("fromPredicate", () => {
-    it("should `Some<value>` when predicate return true", () => {
-      const test = fromPredicate((s: string) => true);
+    it("should return `Some<value>` when predicate return true", () => {
+      const optFn = fromPredicate((s: string) => true);
 
-      expect(test("")).toStrictEqual(some(""));
+      expect(optFn("")).toStrictEqual(some(""));
     });
 
-    it("should `None` when predicate return true", () => {
-      const test = fromPredicate((s: string) => false);
+    it("should return `None` when predicate return false", () => {
+      const optFn = fromPredicate((s: string) => false);
 
-      expect(test("")).toStrictEqual(none);
+      expect(optFn("")).toStrictEqual(none);
     });
   });
 });
