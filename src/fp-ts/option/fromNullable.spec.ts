@@ -1,17 +1,14 @@
-import { option as O } from "fp-ts";
+import { fromNullable, none, some } from "fp-ts/Option";
 
 describe("Option", () => {
   describe("fromNullable", () => {
-    it("should return the values in case passing a value", () => {
-      expect(O.fromNullable(0)).toStrictEqual(O.of(0));
+    it("should return `Some<Value>` in case not `null` or `undefined` a value", () => {
+      expect(fromNullable(0)).toStrictEqual(some(0));
     });
 
-    it("should return the `none` in case passing a `undefined`", () => {
-      expect(O.fromNullable(undefined)).toStrictEqual(O.none);
-    });
-
-    it("should return the `none` in case passing a `null`", () => {
-      expect(O.fromNullable(null)).toStrictEqual(O.none);
+    it("should return the `None` in case passing a `undefined` or `null`", () => {
+      expect(fromNullable(undefined)).toStrictEqual(none);
+      expect(fromNullable(null)).toStrictEqual(none);
     });
   });
 });
